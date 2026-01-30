@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Login = () => {
+const Auth = () => {
     const [time, setTime] = useState(120);
     const [started, setStarted] = useState(false);
 
@@ -23,11 +23,11 @@ const Login = () => {
     };
 
     return (
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex justify-center items-center h-130 bg-gray-100 mt-6">
             <div className="w-90  bg-blue-300 rounded-md m-4">
                 <div className="w-full  flex flex-row-reverse px-2 py-5 justify-around">
                     <button className="bg-white px-5 rounded-md flex justify-center items-center">
-                        Login
+                        Confirm
                     </button>
                     <div className="w-1/2 ">
                         <div
@@ -61,4 +61,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Auth;
