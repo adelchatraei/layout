@@ -7,6 +7,7 @@ import Setting from "./page/setting";
 import { LoginContext } from "./context/login";
 import { useState } from "react";
 import Auth from "./page/auth/auth";
+import InfoProduct from "./page/home/info-product";
 
 function App() {
     const [isLogin, setIsLogin] = useState(false);
@@ -16,7 +17,12 @@ function App() {
             <LoginContext.Provider value={{ isLogin, setIsLogin }}>
                 <Routes>
                     <Route path="/" element={<Header />}>
-                        <Route index element={<HomePage />} />
+                        <Route path="/home" element={<HomePage />}>
+                            <Route
+                                path="/home/:poductId"
+                                element={<InfoProduct />}
+                            />
+                        </Route>
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/setting" element={<Setting />} />
                         <Route path="/auth" element={<Auth />} />

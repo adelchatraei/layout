@@ -13,7 +13,7 @@ const Header = () => {
             >
                 <ul className="flex justify-around w-1/2">
                     <NavLink
-                        to={"/"}
+                        to={"/home"}
                         className={({ isActive, isPending }) =>
                             isPending
                                 ? "bg-blue-100 p-2 rounded-md"
@@ -58,7 +58,7 @@ const Header = () => {
                                   : "bg-blue-100 p-2 rounded-md"
                         }
                     >
-                        Setting
+                        Profile
                     </NavLink>
                 </ul>
                 <button
